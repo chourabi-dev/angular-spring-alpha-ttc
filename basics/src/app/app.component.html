@@ -1,0 +1,22 @@
+<h1>{{ title }}</h1>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque tenetur odio incidunt voluptatibus facilis fugiat suscipit, accusamus unde praesentium quisquam commodi odit, fuga repellendus aliquid soluta. Accusamus, minima aspernatur. Accusantium.
+</p> 
+
+<ul>
+  <li *ngFor=" let e of employees " >
+    <p>
+      
+      
+      <strong *ngIf=" e.year < 2005 "  class="green-name" >{{ e.name }}<br></strong>
+      <strong *ngIf=" e.year >= 2005 " class="orange-name" >{{ e.name }}<br></strong>
+
+
+
+      <small>{{ e.email }}</small><br>
+      <small>{{ e.phone }}</small><br>
+      
+    </p>
+  </li>
+  
+</ul>
