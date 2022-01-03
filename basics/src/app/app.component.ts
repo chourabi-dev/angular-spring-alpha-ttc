@@ -66,6 +66,8 @@ export class AppComponent {
     this.imgURL= this.gallery[this.selectedIndex];
   }*/
 
+  // next mission automatic navigation !! <3
+
 
   /********************************************************** */
 
@@ -83,4 +85,7 @@ export class AppComponent {
     this.y= y+'px';
   }
 
+
+
+  
 }
