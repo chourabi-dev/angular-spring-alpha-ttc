@@ -1,4 +1,4 @@
-<h1>{{ title }}</h1>
+<!--<h1>{{ title }}</h1>
 <p>
   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque tenetur odio incidunt voluptatibus facilis fugiat suscipit, accusamus unde praesentium quisquam commodi odit, fuga repellendus aliquid soluta. Accusamus, minima aspernatur. Accusantium.
 </p> 
@@ -20,3 +20,29 @@
   </li>
   
 </ul>
+
+-->
+<!--
+<p  [innerHTML]=" content  "  ></p>
+
+<p [style.color]="color" id="para" >
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas iste quod tempora explicabo vitae dolores ad illum, veniam excepturi ratione ducimus reprehenderit, odio sit at doloribus harum, recusandae aperiam libero?
+</p>
+
+<button  (click)="btnClick()" [ngClass]=" clicked==false ? 'bg-green' : 'bg-red' " >click me !!</button>-->
+
+<!--gallery-->
+<!--
+<img width="350px" [src]="imgURL" alt="">
+
+<br>
+
+
+<button (click)="previous()" >previous</button> <button (click)="next()" >next</button>-->
+
+<!-- ball in feild -->
+
+
+<div class="feild"  (mousemove)="mouseIsMoving($event)" >
+  <div class="ball"  [style.left] ="x"  [style.top]="y"></div>
+</div>
