@@ -15,3 +15,7 @@ ng new project_name
 start the development server
 
 ng serve
+
+create new pipe
+
+ng g p pipe_name

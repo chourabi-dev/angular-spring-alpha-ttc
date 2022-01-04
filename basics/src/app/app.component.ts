@@ -85,7 +85,24 @@ export class AppComponent {
     this.y= y+'px';
   }
 
+  /******************************************************* */
 
+  todos:any[]=[]; 
 
-  
+  typing(event){
+     
+    const keyCode = event.code; 
+    if (keyCode === 'Enter') {
+      const val = event.target.value;
+
+      const todo = {
+        val:val,
+        date: new Date()
+      } 
+      this.todos.push(todo); 
+      event.target.value=''; 
+    } 
+  }
+
+ 
 }
