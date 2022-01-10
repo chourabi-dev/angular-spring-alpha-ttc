@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Employee } from './models/Employee';
 
 @Component({
@@ -6,7 +7,7 @@ import { Employee } from './models/Employee';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'welcome to angular session !!';
   success: boolean = true;
   year: number = 2016;
@@ -70,7 +71,7 @@ export class AppComponent {
 
 
   /********************************************************** */
-
+  /*
   public x='0px';
   public y='0px';
 
@@ -84,8 +85,7 @@ export class AppComponent {
     this.x = x+'px';
     this.y= y+'px';
   }
-
-  /******************************************************* */
+ 
 
   todos:any[]=[]; 
 
@@ -102,7 +102,59 @@ export class AppComponent {
       this.todos.push(todo); 
       event.target.value=''; 
     } 
+  }*/
+
+
+  /******************************forms******************************* */
+
+  passwordHidden = true;
+
+  accounts:any[] = [];
+
+  constructor(){
+    console.log("constructor !!");
+    
   }
+
+  ngOnInit(){
+    console.log(this.formData);
+    
+    
+  }
+
+
+
+  formData = new FormGroup({
+    email : new FormControl('', [ Validators.email, Validators.required ]), // .valid boolean
+    password: new FormControl('', [ Validators.required, Validators.maxLength(8) ]) // .valid boolean
+  });
+
+
+  submitForm(){
+    console.log("submited !!!!");
+
+    // get the data from the form
+    const data = this.formData.value;
+
+    console.log(data);
+
+    const status = this.formData.status;
+
+    console.log(status);
+    
+
+    this.accounts.push( this.formData.value );
+
+    // reset form
+    this.formData.reset();
+  }
+
+  showPassword(){
+    console.log("clicked !!");
+    
+    this.passwordHidden = ! this.passwordHidden;
+  }
+
 
  
 }
