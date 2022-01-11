@@ -169,11 +169,12 @@
   </div>
 </div>-->
 
+<!-- forms
 <div class="container">
   <div class="row">
     <div class="col-sm-6">
       
-<form [formGroup]="formData" (ngSubmit)="submitForm()"  > <!-- submit classic event  / ng submit -->
+<form [formGroup]="formData" (ngSubmit)="submitForm()"  >  
 
   <label for="">email  <span class="text-danger"  *ngIf="formData.controls.email.valid == false" >*</span>  </label><br>
   <input type="text" formControlName="email" > <br>
@@ -206,4 +207,11 @@
 
     </div>
   </div>
-</div>
+</div>-->
+
+
+
+<!-- componenets-->
+
+
+<router-outlet></router-outlet>

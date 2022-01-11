@@ -1,0 +1,14 @@
+<app-navbar></app-navbar>
+
+
+<div class="container mt-5">
+
+  <h3>List of articles</h3>
+
+  <hr>
+
+  <app-article *ngFor="let  a of articles" [data]="a"  [callFn]="callFromChild" ></app-article>
+
+  
+
+</div>
