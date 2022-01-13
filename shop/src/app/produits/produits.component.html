@@ -1,0 +1,11 @@
+<div class="container" style="margin-top: 25px;">
+    <ul>
+        <li *ngFor="let p of produits">
+            <img [src]="p.photo" width="200px"> <br>
+
+            <p><strong>{{p.title}}</strong> <br> <small>{{ p.price | currency }}</small> </p>
+
+            <button (click)="addToCart(p)" >ajouter au panier</button>
+        </li>
+    </ul>
+</div>

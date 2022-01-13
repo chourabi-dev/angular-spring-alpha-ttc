@@ -1,0 +1,13 @@
+<h1>Category sport</h1>
+
+<hr>
+
+<ul>
+    <li *ngFor="let a of list">
+        <h3>{{ a.title }}</h3>
+
+        <p>
+            <a [routerLink]="'/blog/details/'+ a.id ">voir plus</a>
+        </p>
+    </li>
+</ul>

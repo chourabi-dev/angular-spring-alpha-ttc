@@ -11,6 +11,10 @@ import { LikeButtonComponent } from './like-button/like-button.component';
 import { AboutPageComponent } from './pages/about-page/about-page.component';
 import { ArticlesPageComponent } from './pages/articles-page/articles-page.component';
 import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
+import { BlogComponent } from './blog/blog.component';
+import { DessinComponent } from './dessin/dessin.component';
+import { SportComponent } from './sport/sport.component';
+import { ArticleDetailsComponent } from './article-details/article-details.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +25,11 @@ import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.com
     LikeButtonComponent,
     AboutPageComponent,
     ArticlesPageComponent,
-    NotFoundPageComponent
+    NotFoundPageComponent,
+    BlogComponent,
+    DessinComponent,
+    SportComponent,
+    ArticleDetailsComponent
   ],
   imports: [
     BrowserModule,
