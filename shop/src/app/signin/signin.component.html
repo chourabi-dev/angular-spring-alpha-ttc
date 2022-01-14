@@ -1,0 +1,14 @@
+<h3>Sign in</h3>
+<hr>
+
+<form [formGroup]="authForm" (ngSubmit)="connect()" >
+    <label >username</label> <br>
+    <input type="text" formControlName="username"><br>
+    <br>
+    <label >password</label> <br>
+    <input type="password" formControlName="password"><br>
+    <br>
+
+    <button type="submit">connect</button>
+    
+</form>

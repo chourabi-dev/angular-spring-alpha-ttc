@@ -1,0 +1,12 @@
+<h3>Users list</h3>
+
+<hr>
+
+<ul>
+    <li *ngFor="let u of users">
+        <p>
+            <strong> {{ u.name }}</strong> <br>
+            <small>{{ u.email }}</small>
+        </p>
+    </li>
+</ul>
