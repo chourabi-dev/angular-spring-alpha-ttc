@@ -1,7 +1,7 @@
 <div class="d-flex justify-content-between">
     <h3>Clients</h3>
 
-    <a href="#" class="btn btn-primary"><i class="fas fa-plus"></i> Add</a>
+    <a routerLink="/clients/add" class="btn btn-primary"><i class="fas fa-plus"></i> Add</a>
 </div>
 
 
@@ -14,7 +14,6 @@
                 <th>First name</th>
                 <th>Last name</th>
                 <th>Email</th>
-                <th>Actions</th>
                 
             </thead>
             <tbody>
@@ -23,9 +22,6 @@
                     <td>{{c.firstname}}</td>
                     <td>{{c.lastname}}</td>
                     <td>{{c.email}}</td>
-                    <td>
-
-                    </td>
                     
                 </tr>
 

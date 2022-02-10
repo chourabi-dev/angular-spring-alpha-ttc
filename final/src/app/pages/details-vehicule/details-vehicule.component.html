@@ -1,0 +1,43 @@
+<div class="container" *ngIf="data !=null">
+    <h1>{{ data.mark }} {{ data.model }}</h1>
+    <h3>{{ data.matricule }} / {{ data.puissance }} HP</h3>
+
+
+    <hr>
+
+
+
+
+    <div class="card">
+        <div class="card-body">
+            <h3>Interventions</h3>
+
+
+            <a routerLink="/vehicules/add-intervention/{{id}}" class="btn btn-primary btn-sm">add new intervention</a>
+
+            <table class="table mt-3">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Descriptions</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr *ngFor="let item of data.interventions">
+                        <td>{{ item.id }}</td>
+                        <td>
+                            {{ item.descriptino }}
+                        </td>
+                        <td>
+                            {{ item.date | date }}
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>

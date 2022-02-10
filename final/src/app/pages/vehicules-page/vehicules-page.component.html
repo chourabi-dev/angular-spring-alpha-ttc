@@ -1,0 +1,43 @@
+<div class="d-flex justify-content-between">
+    <h3>Clients</h3>
+
+    <a routerLink="/vehicules/add" class="btn btn-primary"><i class="fas fa-plus"></i> Add</a>
+</div>
+
+
+
+
+<div class="card">
+    <div class="card-body">
+        <table class="table">
+            <thead>
+                <th>#</th>
+                <th>Mark</th>
+                <th>Model</th>
+                <th>Power</th>
+                <th>Registration</th>
+                <th>Color</th>
+                <th>actions</th>
+                
+                
+            </thead>
+            <tbody>
+                <tr *ngFor="let c of vehicules">
+                    <td>{{c.id}}</td>
+                    <td>{{c.mark}}</td>
+                    <td>{{c.model}}</td>
+                    <td>{{c.puissance}}</td>
+                    <td>{{c.matricule}}</td>
+                    <td> <div style="height: 20px;width:20px" [style.backgroundColor]="c.color" ></div> </td>
+                    <td>
+                        <a routerLink="/vehicules/details/{{c.id}}">details</a>
+                    </td>
+
+  
+                </tr>
+
+
+            </tbody>
+        </table>
+    </div>
+</div>
